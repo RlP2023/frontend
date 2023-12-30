@@ -10,7 +10,7 @@ interface BreadcrumbsProps {
 const Breadcrumbs: FC<{ pages: BreadcrumbsProps[] }> = ({ pages }) =>  (
     <Container id="breadcrumbs">
         <Row style={{ display: "block" }}>
-            <a href={`${getBase()}/`} style={{ textDecoration: "None" }}>Список рекордов</a>
+            <a href={`${getBase()}/`} style={{ textDecoration: "None" }}>Список услуг</a>
             /
             {pages && pages.map((page) => (
                 <a href={ page.link } style={{ textDecoration: "None" }}>{page.title }</a>

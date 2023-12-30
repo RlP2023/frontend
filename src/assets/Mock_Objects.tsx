@@ -1,4 +1,27 @@
-export interface Record {
+
+interface Response {
+    draft_id:-1,
+    data: Ship[]
+}
+
+
+const getDefaultShip= (): Ship[] => {
+    let result = []
+    let count = 3
+    for (let i = 1; i <= count; ++i) {
+        result.push(default_Record(i))
+    }
+    return result}
+
+export const getDefaultResponse = (): Response => {
+    return {
+        draft_id:-1,
+        data: [default_Record(1)]
+    }
+}
+
+
+export interface Ship {
     record_id: number,
     rec_name: string,
     units?: string,
@@ -8,7 +31,7 @@ export interface Record {
     photo_record: string
 }
 
-export const default_Record = (id: number): Record => 
+export const default_Record = (id: number): Ship => 
  {return {
     record_id: id,
     rec_name: "Название" + (id).toString(),
